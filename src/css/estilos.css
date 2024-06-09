@@ -75,6 +75,13 @@ body {
   z-index: 1;
 }
 
+.cartao .imagem-personagem {
+  width: 100%;
+  max-height: 280px;
+  object-fit: cover;
+  margin-bottom: 0; /* Remove bottom margin */
+}
+
 .cartao .nome {
   background-color: rgba(179, 177, 185, 0.7);
   padding: 8px 10px;
@@ -87,18 +94,16 @@ body {
   text-align: center;
 }
 
-.cartao .imagem-personagem {
-  width: 100%;
-  max-height: 280px;
-  object-fit: cover; /* Garante que a imagem se ajuste ao container */
-}
-
 .cartao .descricao {
   background-color: rgba(255, 255, 255, 0.8);
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  overflow-y: auto; /* Adiciona rolagem se o conteúdo exceder */
-  max-height: 200px; /* Define a altura máxima da descrição */
+  padding: 12px;
+  margin-top: 0; /* Remove top margin */
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .cartao .descricao .titulo {
@@ -106,12 +111,16 @@ body {
   font-size: 20px;
   color: #fff;
   padding: 12px;
-  margin-bottom: 10px; /* Espaço entre o título e o texto */
+  margin-bottom: 10px;
+  margin-top: 0; /* Remove top margin */
 }
 
 .cartao .descricao .texto {
   font-size: 14px;
+  padding: 12px;
   text-align: justify;
+  max-height: 110px;
+  overflow-y: auto;
 }
 
 .cartao.fundo-1,
@@ -120,7 +129,7 @@ body {
 .cartao.fundo-4,
 .cartao.fundo-5,
 .cartao.fundo-6 {
-  background: rgba(255, 255, 255, 0.3); /* 30% de transparência */
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .texto {
